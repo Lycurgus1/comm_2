@@ -1,5 +1,5 @@
 #SQL Notes 23/06/2020
-SQL languages
+****SQL languages****
 - Data Manipulation Language (DML)
     - Contains SELECT, INSERT,UPDATE, DELETE
 - Data Definition Language (DDL)
@@ -14,20 +14,67 @@ SQL languages
     - COMMIT, ROLLBACK, SAVEPOINT
     - Only when change is committed will others see it
 
-Data types
+**Data types**
 - VARCHAR()
     - Records max size of string, adaptable to different sizes and memory efficent
 - CHAR()
     - Data must be of fixed length, fixed space use but 50% more efficient
- 
+- INT
+    - Holds whole number, postive or negative
+    - Also BIGINT, SMALLINT, TINYINT (Diff memory sizes)
+- DATE/DATETIME
+    - As expected, set format of:'2000-01-19 12:00:00'
+ - DECIMAL(size, d)
+    - fixed precision, sacle no. of digits to right specified.The total digits is specified in size. The digits after decimal point is specified in the d parameter.
+ - BINARY(size)
+    - Stores Binary data like image and files 
+ -FLOAT(size, d)
+    - The total digits is specified in size. The digits after decimal point is specified in the d parameter.
+- BIT
+    - Binary. 0,1 or NULL. Used as boolean
+ - Data Type usage
+    - Phone number etc. as CHAR as limited and always same length
+    - VARCHAR when length variable  
+    
+**Code**   
 Create Database
+- "CREATE DATABASE max_palmer"
 Create Table
+- CREATE TABLE film_table
+(
+    film_name VARCHAR(10),
+    film_type VARCHAR(6),
+    date_of_Release DATE,
+    film_language CHAR (3),
+);
+
 SELECT usage
+- SELECT * FROM film_table;
+
 Alter Table
+- ALTER TABLE film_table
+ADD release_date DATETIME NOT NULL;
+- Can be used to modify, rename, add or drop columns
+
 Inserting values
+- INSERT INTO director
+(director_name, film_id)
+VALUES
+('Harry', 3)
+- OR dont need to mention columns as in 'INSERT INTO x VALUES ('test', 'test2'). Will fall into relevant columns.
+
+
 Drop command
+- DROP TABLE director;
 
 Null
+- NULL is not nothing, not = 0. Not empty string. Value can be null but null != null as null undefined. 
+
 Update, Delete Commands
+- UPDATE film_table SET film_type='thing' WHERE film_name='LOTR2'
+- DELETE FROM x WHERE column_name = 2
+- without where will empty out table
+
 Normalisation
+
 Constraints
