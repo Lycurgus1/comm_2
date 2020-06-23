@@ -1,4 +1,5 @@
 #SQL Notes 23/06/2020
+
 ****SQL languages****
 - Data Manipulation Language (DML)
     - Contains SELECT, INSERT,UPDATE, DELETE
@@ -56,7 +57,7 @@ Alter Table
 ADD release_date DATETIME NOT NULL;
 - Can be used to modify, rename, add or drop columns
 
-Inserting values
+Inserting Values
 - INSERT INTO director
 (director_name, film_id)
 VALUES
@@ -70,11 +71,53 @@ Drop command
 Null
 - NULL is not nothing, not = 0. Not empty string. Value can be null but null != null as null undefined. 
 
-Update, Delete Commands
+**Update, Delete Commands**
 - UPDATE film_table SET film_type='thing' WHERE film_name='LOTR2'
 - DELETE FROM x WHERE column_name = 2
 - without where will empty out table
 
-Normalisation
+**Constraints**
+- NOT NULL
+    -Ensures that a column cannot have a NULL value
+    - _CREATE TABLE Persons (
+    ID int NOT NULL);_
+- UNIQUE
+    - Ensures that all values in a column are different
+    - CREATE TABLE Persons (
+    ID int UNIQUE
+    );
+ - PRIMARY KEY
+    -A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+    - CREATE TABLE Persons (
+    Age int,
+    PRIMARY KEY (ID)
+    ); 
+- FOREIGN KEY
+    - Uniquely identifies a row/record in another table
+    - CREATE TABLE Persons (
+    Age int,
+    FOREIGN KEY (ID)
+    ); 
+- DEFAULT
+    - Sets a default value for a column when no value is specified
+    - CREATE TABLE Persons (
+    City varchar(255) DEFAULT 'Sandnes'
+    ); 
 
-Constraints
+**Database considerations**
+- Security (admin rights etc.)
+- Recovery (data centre outages etc.)
+- Integrity
+- Normal form(normalisation)
+
+**Normalisation**
+- 1st Normal form
+    - When Data is atomic, as simple as possible
+- 2nd Normal form
+    - When 1NF met
+    - When all non - key attributes based on primary key
+- 3rd Normal form
+    - When 2NF met
+    - When no non-key column depedent on other non-key column
+- Examples for all in word
+    
