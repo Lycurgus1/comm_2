@@ -41,27 +41,35 @@
 Create Database
 - "CREATE DATABASE max_palmer"
 Create Table
-- CREATE TABLE film_table
+```
+CREATE TABLE film_table
 (
     film_name VARCHAR(10),
     film_type VARCHAR(6),
     date_of_Release DATE,
     film_language CHAR (3),
 );
+```
 
 SELECT usage
-- SELECT * FROM film_table;
+````
+SELECT * FROM film_table;
+````
 
 Alter Table
-- ALTER TABLE film_table
+````
+ALTER TABLE film_table
 ADD release_date DATETIME NOT NULL;
+````
 - Can be used to modify, rename, add or drop columns
 
 Inserting Values
-- INSERT INTO director
+````
+INSERT INTO director
 (director_name, film_id)
 VALUES
 ('Harry', 3)
+````
 - OR dont need to mention columns as in 'INSERT INTO x VALUES ('test', 'test2'). Will fall into relevant columns.
 
 
@@ -72,38 +80,49 @@ Null
 - NULL is not nothing, not = 0. Not empty string. Value can be null but null != null as null undefined. 
 
 **Update, Delete Commands**
-- UPDATE film_table SET film_type='thing' WHERE film_name='LOTR2'
-- DELETE FROM x WHERE column_name = 2
+````
+UPDATE film_table SET film_type='thing' WHERE film_name='LOTR2'
+DELETE FROM x WHERE column_name = 2
+````
 - without where will empty out table
 
 **Constraints**
 - NOT NULL
     -Ensures that a column cannot have a NULL value
-    - _CREATE TABLE Persons (
+    ````
+    CREATE TABLE Persons (
     ID int NOT NULL);_
+    ````
 - UNIQUE
     - Ensures that all values in a column are different
-    - CREATE TABLE Persons (
+    ````
+    CREATE TABLE Persons (
     ID int UNIQUE
     );
+  ````
  - PRIMARY KEY
     -A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
-    - CREATE TABLE Persons (
+    ````
+    CREATE TABLE Persons (
     Age int,
     PRIMARY KEY (ID)
     ); 
+   ````
 - FOREIGN KEY
     - Uniquely identifies a row/record in another table
-    - CREATE TABLE Persons (
+    ````
+    CREATE TABLE Persons (
     Age int,
     FOREIGN KEY (ID)
     ); 
+  ````
 - DEFAULT
     - Sets a default value for a column when no value is specified
-    - CREATE TABLE Persons (
+    ````
+    CREATE TABLE Persons (
     City varchar(255) DEFAULT 'Sandnes'
     ); 
-
+    ````
 **Database considerations**
 - Security (admin rights etc.)
 - Recovery (data centre outages etc.)
