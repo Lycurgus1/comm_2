@@ -113,6 +113,7 @@ Null
 **Normalisation**
 - 1st Normal form
     - When Data is atomic, as simple as possible
+    - No repition of Data
 - 2nd Normal form
     - When 1NF met
     - When all non - key attributes based on primary key
