@@ -76,14 +76,23 @@ ORDER BY "AVG Reorder Level" DESC
 - Joins
    - Combines rows
    - Often explained with Venn Diagrams
-   - Various types:
+   - Reliant on Primary, Foreign Key relationship
+   - Use Entity relationship diagram to find method
+
+- SQL Logical Syntax Sequence
+    - Select, Distinct, Where, Group by, Having, Order by 
+
+- SQL Processing Sequence
+    - From, Where,Group by, Having, Select, Distinc, Order by
+    
+- Types of join
    - Inner join
    - Full join
    - Left join
    - Right join
    - Self join
    - Cartesian join
-   - Reliant on Primary, Foreign Key relationship
+
 - Inner Join
    - Selects only matches
    ````
@@ -102,4 +111,16 @@ ORDER BY "AVG Reorder Level" DESC
 - Full join
     - returns all records
     - Also uses null where no matches
+    ````
+    SELECT * FROM student s FULL JOIN course c   
+    ON s.course_id=c.c_id
+    ````
+- Self Join
+    - Unary relationship
+    - Rows of table combined
+
+- Cross join
+    - Generates pair combination of each row in 1st table with row in second table
+    - Ouputs all combinations of rows
+    - Output = amount of columns from A * Amount of columns from B
     
