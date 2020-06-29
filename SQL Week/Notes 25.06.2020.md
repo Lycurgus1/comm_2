@@ -18,7 +18,7 @@ DATEDIFF(YEAR/MONTH/DAY, OrderDate, ShippedDate) AS "Ship Time"
 ````
 -Get year/month/day
 ````
-SELECT YEAR/MONTH/DAY AS "Order time period
+SELECT YEAR/MONTH/DAY() AS "Order time period
 ````
 -exercise 1
 ````
