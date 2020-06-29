@@ -30,6 +30,6 @@ WHERE a.studentid = b.studentid AND b.total_marks >
     WHERE studentid =  'V002');
 ```
 - Inner query runs first, gets total marks of student 2
-    - Then compares this to the where statement
+- Then compares this to the where statement
     
  
