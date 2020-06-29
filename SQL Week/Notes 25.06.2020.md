@@ -83,7 +83,7 @@ ORDER BY "AVG Reorder Level" DESC
     - Select, Distinct, Where, Group by, Having, Order by 
 
 - SQL Processing Sequence
-    - From, Where,Group by, Having, Select, Distinc, Order by
+    - From, Where,Group by, Having, Select, Distinct, Order by
     
 - Types of join
    - Inner join
