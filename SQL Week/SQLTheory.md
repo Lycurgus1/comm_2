@@ -87,3 +87,14 @@
 
 - Processing sequence
     - FROM, Where, Group BY, **Having,** SELECT, Distinct, Order by
+
+***Best Practice***
+- Avoid duplicate data
+- Use labels
+
+***A Junction Table***
+- (sometimes referred to as a "Bridge Table")
+- is a table that contains references to both groups; bridging them together. (Example: Where there is a many to many relationship you can make a junction table with the primary keys of the tables, then form a junction table. This table then forms a composite primary key.
+
+***Candidate Primary key***
+- If there are multiple choices for being a primary key, then all the options are called candidates for being the primary key
