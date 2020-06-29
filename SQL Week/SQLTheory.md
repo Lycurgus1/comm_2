@@ -15,7 +15,7 @@
     - Only when change is committed will others see it
 
 ***Foreign, Primary Keys***
-- Key to relational databases
+- Key to relational database
 - Primary keys are:
     - Unique
     - Cannot change
