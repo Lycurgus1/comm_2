@@ -79,7 +79,7 @@ ORDER BY [Manager Name];
 
 ***Maxims***
 - Always answer specific question - Specif column name
-- Format (()'c') to display something in cash format
+- Format ((xyz)'c') to display something in cash format
 - Only sort in game questions when asked
 - SQL indexing starts at 1
 - When Customers mentioned do GROUP BY customers

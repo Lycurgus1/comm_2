@@ -300,6 +300,12 @@ CONCAT(e.FirstName, ' ' ,e.LastName) AS "Name",
 DATEDIFF(yy, e.BirthDate, GETDATE()) AS "AGE"
 FROM Employees e
 ````
+- SELECT DATENAME
+    - Used for displaying data in excel
+    - Otherwise can be weird in making graphs   
+```
+SELECT DATENAME(year, '12:10:30.123')
+```
 
 SELECT CASE
 ````
