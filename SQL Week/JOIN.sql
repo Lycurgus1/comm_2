@@ -86,3 +86,4 @@ ON s.course_id=c.c_id
 SELECT * FROM student s FULL JOIN course c   
 ON s.course_id=c.c_id
 
+
