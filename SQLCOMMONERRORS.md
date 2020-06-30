@@ -87,4 +87,6 @@ ORDER BY [Manager Name];
 ````
 SELECT CAST('2017-08-25' AS datetime); 
 ````
+- In Exam be careful of data types, where to use column aliasing. 
+- Where only used when queries actual table
 - 
