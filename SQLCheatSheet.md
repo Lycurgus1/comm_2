@@ -293,7 +293,7 @@ DATEDIFF(YEAR/MONTH/DAY, OrderDate, ShippedDate) AS "Ship Time"
 ````
 SELECT YEAR/MONTH/DAY() AS "Order time period
 ````
--exercise 1
+-exercise 1, also showing datetime formatting
 ````
 SELECT e.BirthDate,
 CONCAT(e.FirstName, ' ' ,e.LastName) AS "Name",
