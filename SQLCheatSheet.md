@@ -87,6 +87,12 @@ DELETE FROM x WHERE column_name = 2
 - without where will empty out table
 
 **Constraints**
+- IDENTITY
+    - Creates iterating int for primary key and foreign key relationships
+    ````
+    CREATE TABLE Customers ( 
+    CustomerID Int IDENTITY NOT NULL);
+    ````
 - NOT NULL
     -Ensures that a column cannot have a NULL value
     ````
