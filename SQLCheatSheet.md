@@ -89,9 +89,11 @@ DELETE FROM x WHERE column_name = 2
 **Constraints**
 - IDENTITY
     - Creates iterating int for primary key and foreign key relationships
+    - First number defines starting number, second number the iterating change.
+    - Defaults to 1, 1
     ````
     CREATE TABLE Customers ( 
-    CustomerID Int IDENTITY NOT NULL);
+    CustomerID Int IDENTITY(1, 1) NOT NULL);
     ````
 - NOT NULL
     -Ensures that a column cannot have a NULL value
