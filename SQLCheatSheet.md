@@ -87,6 +87,14 @@ DELETE FROM x WHERE column_name = 2
 - without where will empty out table
 
 **Constraints**
+- IDENTITY
+    - Creates iterating int for primary key and foreign key relationships
+    - First number defines starting number, second number the iterating change.
+    - Defaults to 1, 1
+    ````
+    CREATE TABLE Customers ( 
+    CustomerID Int IDENTITY(1, 1) NOT NULL);
+    ````
 - NOT NULL
     -Ensures that a column cannot have a NULL value
     ````
@@ -293,7 +301,7 @@ DATEDIFF(YEAR/MONTH/DAY, OrderDate, ShippedDate) AS "Ship Time"
 ````
 SELECT YEAR/MONTH/DAY() AS "Order time period
 ````
--exercise 1
+-exercise 1, also showing datetime formatting
 ````
 SELECT e.BirthDate,
 CONCAT(e.FirstName, ' ' ,e.LastName) AS "Name",
