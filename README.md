@@ -1,6 +1,6 @@
 # What is this
 
-A collection of Business and SQL notes from Sparta Global Training
+A collection of Business and SQL notes from my intial DevOps Engineer training
 
 ## It contains:
 
